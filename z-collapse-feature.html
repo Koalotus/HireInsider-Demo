@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Collapse Feature example</title>
+
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+		<!--Custom CSS -->
+		<link href="css/main.css" rel="stylesheet" media="screen">
+
+		<!-- Add Custom Fonts here -->
+
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="../../assets/js/html5shiv.js"></script>
+			<script src="../../assets/js/respon.min.js"></script>
+		<![endif]-->
+
+
+	</head>
+	<body><div class="container">
+
+	<h4 class="expanderHead" style="cursor:pointer;">
+	  <i class="glyphicon glyphicon-plus">&nbsp;</i>Click to continue reading
+	</h4>
+	<div>
+		content<br>
+		content<br>
+		content<br>
+		content<br>
+		content<br>
+	</div>
+
+	<footer></footer>
+	</footer>
+		<!-- JQuery (for bootstrap's JavaScript plugins)  -->
+		<script src="js/jquery-1.11.1.js"></script>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed-->
+		<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+		  	$(".expanderHead").each(function(){
+		      if ($(this).children().hasClass("glyphicon glyphicon-plus")){
+		        $(this).next().hide();
+		      }
+		    });
+			$(".expanderHead").click(function(){
+				$(this).next().toggle();
+				if ($(this).children().hasClass("glyphicon glyphicon-plus")){
+					$(this).children().removeClass("glyphicon glyphicon-plus");
+		            $(this).children().addClass("glyphicon glyphicon-minus");
+				}      
+				else {
+					$(this).children().removeClass("glyphicon glyphicon-minus");
+		            $(this).children().addClass("glyphicon glyphicon-plus");
+				}
+			});
+		});
+	</script>
+
+	</div></body>
+</html>
+
+	
